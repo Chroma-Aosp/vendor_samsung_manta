@@ -12,6 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    camera.flash_off=0 \
+    ro.com.widevine.cachesize=16777216
+
 # Audience blob(s) necessary for Manta hardware
 PRODUCT_PACKAGES := \
     es305_fw
@@ -40,6 +44,15 @@ PRODUCT_PACKAGES := \
     020a0000000000000000000000000000 \
     07060000000000000000000000000000 \
     ffffffff000000000000000000000005 \
+    libbccArm \
+    libfrsdk \
+    
+        
+PRODUCT_PACKAGES += \
+    libfmas \
+    fmas_eq.dat \
+    audio_effects \
+    libfrsdk 
     
 
 
